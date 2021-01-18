@@ -55,7 +55,9 @@ std::string infix2postfix(const std::string &in) {
     while (!out.isEmpty()) {
         a.emplace(a.cbegin(), out.pop());
     }
-    a.erase(a.cbegin());
+    if (a[0]==' ') {
+        a.erase(a.cbegin());
+    }
     std::string out1 = &a[0];
     return out1;
 }

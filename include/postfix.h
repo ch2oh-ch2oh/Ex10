@@ -5,6 +5,6 @@
 #include <iostream>
 #include "MyStack.h"
 #include <string>
-std::string infix2prefix(const std::string &in);
+std::string infix2postfix(const std::string &in);
 
 #endif  // INCLUDE_POSTFIX_H_

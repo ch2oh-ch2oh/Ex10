@@ -1,7 +1,7 @@
 // Copyright 2021 ch2oh
 #include "postfix.h"
 
-std::string infix2prefix(const std::string &in) {
+std::string infix2postfix(const std::string &in) {
     MyStack<char> local(in.length() * 2);
     MyStack<char> out(in.length() * 2);
     bool flag = false;

@@ -14,8 +14,9 @@ std::string infix2prefix(const std::string &in) {
             }
             out.push(token);
             continue;
-        } else
+        } else {
             flag = true;
+        }
         if (token == '(') {
             local.push(token);
             continue;
@@ -37,7 +38,8 @@ std::string infix2prefix(const std::string &in) {
                 local.push(token);
                 continue;
             }
-            while (!local.isEmpty() && local.get() != '(' && local.get() != '+' && local.get() != '-') {
+            while (!local.isEmpty() && local.get() != '(' &&
+                    local.get() != '+' && local.get() != '-') {
                 out.push(' ');
                 out.push(local.pop());
             }

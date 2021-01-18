@@ -7,11 +7,11 @@
 
 template<typename T>
 class MyStack {
-private:
+ private:
     std::vector<T> *stack;
     size_t size;
 
-public:
+ public:
     explicit MyStack(size_t t) : stack(new std::vector<T>()), size(t) {}
 
     MyStack(const MyStack<T> &toCopy) : size(toCopy.size) {
